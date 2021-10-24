@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.sforce.ws.ConnectorConfig;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -49,7 +50,10 @@ public class DemoApplication {
 		return args -> {
 			System.out.println("Let's inspect the beans");
 
+			ConnectorConfig ourConnector = new ConnectorConfig();
+
 			String[] beanNames = ctx.getBeanDefinitionNames();
+
 			Arrays.sort(beanNames);
 
 //			for(String beanName : beanNames){

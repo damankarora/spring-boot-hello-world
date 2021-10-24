@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.salesforce</groupId>
+  <artifactId>ant</artifactId>
+  <versioning>
+    <release>52.0</release>
+    <versions>
+      <version>52.0</version>
+    </versions>
+    <lastUpdated>20211024122148</lastUpdated>
+  </versioning>
+</metadata>
