@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
+import java.util.Map;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -34,6 +35,7 @@ public class DemoApplication {
 
 	public static String staticOS;
 
+//	Loading from .env file.
 	static final String fileEnv = dotenv.get("MY_MESSAGE");
 
 	public static void main(String[] args) {
@@ -67,19 +69,25 @@ public class DemoApplication {
 //        Accessing application.properties apart from port on heroku.
 			System.out.println(messageFromApplication);
 
-//			System property
+//			Heroku vars can't be accessed using System.getProperty()
+//			Prints null.
 			System.out.println("System.properties message "+System.getProperty("message"));
 
 //        Getting from environment variables on heroku.
 			System.out.println(System.getenv("message"));
 
-//			OS message from application.
+
+//			Getting all the environment variables.
+			Map<String, String> ourEnvVars = System.getenv();
+			for (Map.Entry<String, String> entry : ourEnvVars.entrySet()){
+				System.out.println(entry.getKey()+" = "+entry.getValue());
+			}
+
+//			OS message from application.properties
 			System.out.println(osFromApplication);
 
 
 
-//			Another variable
-			System.out.println(System.getenv("OS"));
 
 		};
 	}
