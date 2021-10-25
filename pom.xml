@@ -46,6 +46,24 @@
 			<version>52.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.salesforce</groupId>
+			<artifactId>partner</artifactId>
+			<version>53.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.salesforce</groupId>
+			<artifactId>metadata</artifactId>
+			<version>53.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.salesforce</groupId>
+			<artifactId>tooling</artifactId>
+			<version>53.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
